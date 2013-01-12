@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Dog</title>
+<style type="text/css">
+img {
+	height:540px;
+	width:auto;
+}
+</style>
+<script type="text/javascript">
+function disp()
+{
+document.getElementById("datey").innerHTML=Date();
+document.getElementById("datebutton").outerHTML='<input style="background-color:yellow;color:green;font-weight:bold;" type="button" value="Update Date" onclick="disp()" >'
+}
+function delimg()
+{
+document.getElementById("image").outerHTML='<p id="backsoon"></p>'
+document.getElementById("button").outerHTML='<input id="button2" style="color:blue;background-color:pink;font-weight:bold;" type="button" value="Make Dog Reappear!" onclick="reap()" />'
+}
+function reap()
+{
+document.getElementById("backsoon").outerHTML='<img id="image" src="cute.jpg" />'
+document.getElementById("button2").outerHTML='<input id="button" style="color:blue;background-color:pink;font-weight:bold;" type="button" value="Vanish The Dog!" onclick="delimg()" />'
+}
+function secret()
+{
+document.getElementById("image").outerHTML='<img id="image" src="scary.jpg" />'
+document.getElementById("button3").outerHTML='<input id="button4" type="button" style="color:pink;background-color:blue;font-weight:bold;" value="Make Dog Normal Again" onclick="secret2()" />'
+}
+function secret2()
+{
+document.getElementById("image").outerHTML='<img id="image" src="cute.jpg" />'
+document.getElementById("button4").outerHTML='<input id="button3" type="button" style="color:pink;background-color:blue;font-weight:bold;" value="Another Button" onclick="secret()" />'
+}
+</script>
+</head>
+<body style="background-color:purple;">
+<img id="image" src="cute.jpg" />
+<form>
+<input id="button" style="color:blue;background-color:pink;font-weight:bold;" type="button" value="Vanish The Dog!" onclick="delimg()" />
+<input id="button3" type="button" style="color:pink;background-color:blue;font-weight:bold;" value="Another Button" onclick="secret()" />
+<input id="datebutton" style="background-color:yellow;color:green;font-weight:bold;" type="button" value="Display Date" onclick="disp()" />
+<p style="background-color:yellow;color:green;font-weight:bold;" id="datey"></p>
+</form>
+</body>
+</html>
